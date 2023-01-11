@@ -48,7 +48,6 @@
         "html-loader": "4.1.0",
         "html-webpack-plugin": "5.5.0",
         "htmlhint": "^1.1.4",
-        "husky": "^8.0.0",
         "mini-css-extract-plugin": "2.6.1",
         "pre-commit": "^1.2.2",
         "prettier": "^1.19.1",
