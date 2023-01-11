@@ -6,6 +6,8 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="../js/getRoutes.js"></script>
+    <script src="../js/getGuides.js"></script>
     <script src="https://maps.api.2gis.ru/2.0/loader.js?pkg=full"></script>
     <!-- Bootstrap CSS v5.2.1 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -165,14 +167,22 @@
                         <li class="page-item"><a class="page-link" href="#">Следующая </a></li> -->
                     </ul>
                 </div>
+                <h3 class="my-3">Гиды, доступные на вашем маршруте</h3>
+                <table>
+                    <thead class="w-100">
+                        <tr>
+                            <th>Имя</th>
+                            <th>Язык</th>
+                            <th>Опыт</th>
+                            <th>Цена</th>
+                            <th>    </th>
+                        </tr>
+                    </thead>
+                    <tbody id="guides__table">
+                        <!--здесь будут гиды-->
+                    </tbody>
+                </table>
             </div>
-        </section>
-        <section>
-            <div class="container">
-                <h2>Гиды, доступные на вашем маршруте</h2>
-                <!--здесь будут гиды-->
-            </div>
-
         </section>
     </main>
     <footer class="">
@@ -183,33 +193,8 @@
             </ul>
         </div>
     </footer>
-
-    <!-- auth Modal -->
-    <!-- <div class="modal fade" id="authModal" tabindex="-1" aria-labelledby="authModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <!-- <h1 class="modal-title fs-5" id="authModalLabel">Modal title</h1> -->
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <form action="./admiin.html" class="col">
-                        <h3 class="text-center m-5">Авторизация</h3>
-                        <div class="col border-bottom my-4">
-                            <label for="authLogin">Логин</label>
-                            <input id="authLogin" type="email">
-                        </div>
-                        <div class="col border-bottom my-5">
-                            <label for="authPassword">Пароль</label>
-                            <input id="authPassword" type="password">
-                        </div>
-                        <button type="submit" class="btn btn-primary">Войти</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div> -->
     <script src="../js/paginationRoutes.js"></script>
+    <script src="../js/showGuides.js"></script>
     <!-- Bootstrap JavaScript Libraries -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
         integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
