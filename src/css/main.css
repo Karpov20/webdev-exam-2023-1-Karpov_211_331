@@ -17,3 +17,7 @@
 a {
     text-decoration: none;
 }
+header {
+    width: 100%;
+    background-color: var(--b-c--turquose);
+}
