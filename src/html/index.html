@@ -7,7 +7,6 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <script src="https://maps.api.2gis.ru/2.0/loader.js?pkg=full"></script>
-    <script src="main.js"></script>
     <!-- Bootstrap CSS v5.2.1 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
@@ -32,8 +31,7 @@
                         <li class="nav-item"><a href="#" class="nav-link active">Маршруты</a></li>
                         <li class="nav-item"><a href="#" class="nav-link active">Гиды</a></li>
                     </ul>
-                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#authModal">Войти в
-                        ЛК</button>
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#authModal">Войти в ЛК</button>
                 </div>
             </nav>
         </div>
@@ -110,31 +108,17 @@
                     <input id="searchRoute" type="search" placeholder="Поиск по названию" class="form-control ">
                     <button type="submit" class="btn btn-outline-dark px-4">Найти</button>
                 </form>
-                <div id="map" class="map w-100">
-                    
+                <div id="map" class="map w-100">  
                 </div>
             </div>
         </section>
-
         <section>
             <div class="container my-5">
                 <div class="row">
                     <h2>Список пешеходных маршрутов</h2>
-                    <div class="sight col-md-4 col-lg-3 col-sm-12">
-                        <select class="category" name="category" id="category">
-                            <option value="1">Жалоба</option>
-                            <option value="2 selected">Предложения</option>
-                            <option value="3"></option>
-                            <option value="4"></option>
-                        </select>
-                    </div>
                     <div class="table-responsive my-3">
-                        <table id="table-id" class="table
-                        table-hover	
-                        table-bordered  
-                        align-middle
-                        table-warning">
-                            <thead class="table">
+                        <table id="routes__table" class="table table-hover table-bordered align-middle table-warning">
+                            <!-- <thead class="table">
                                 <tr>
                                     <th>Название</th>
                                     <th>Описание</th>
@@ -169,18 +153,16 @@
                             </tbody>
                             <tfoot>
 
-                            </tfoot>
+                            </tfoot> -->
                         </table>
                     </div>
-                    <nav aria-label="Page navigation example">
-                        <ul class="pagination justify-content-center">
-                            <li class="page-item"><a class="page-link" href="#">Предыдущая</a></li>
-                            <li class="page-item active"><a class="page-link" href="#table-id">1</a></li>
-                            <li class="page-item"><a class="page-link" href="#table-id2">2</a></li>
-                            <li class="page-item"><a class="page-link" href="#table-id">3</a></li>
-                            <li class="page-item"><a class="page-link" href="#">Следующая </a></li>
-                        </ul>
-                    </nav>
+                    <ul id="pagination" class="pagination justify-content-center">
+                        <!-- <li class="page-item"><a class="page-link" href="#">Предыдущая</a></li>
+                        <li class="page-item active"><a class="page-link" href="#table-id">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#table-id2">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#table-id">3</a></li>
+                        <li class="page-item"><a class="page-link" href="#">Следующая </a></li> -->
+                    </ul>
                 </div>
             </div>
         </section>
@@ -198,6 +180,7 @@
     <footer>
         <!-- place footer here -->
     </footer>
+    <script src="../js/paginationRoutes.js"></script>
     <!-- Bootstrap JavaScript Libraries -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
         integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
