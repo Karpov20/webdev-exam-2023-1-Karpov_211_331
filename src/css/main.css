@@ -23,6 +23,9 @@
 a {
     text-decoration: none;
 }
+li {
+    list-style: none;
+}
 header {
     background-color: var(--b-c--turquose);
 }
@@ -30,4 +33,7 @@ header {
     background: url(https://static-cse.canva.com/blob/579839/20201020T155859.528.jpg) fixed top center;
     background-repeat: no-repeat;
     background-size: cover;
+}
+#map {
+    height: 50vh;
 }
