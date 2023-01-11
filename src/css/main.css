@@ -6,6 +6,12 @@
     --b-c--brown: #804030;
     --b-c--cream: #FFFDD0;
     --b-c--Dpurple: #301934;
+    /* bs-colors customize*/
+    --bs-body-color: var(--b-c--cherry-red);
+    --bs-body-bg: var(--b-c--cream);
+    --bs-primary: var(--b-c--Dpurple);
+    --bs-secondary-color: var(--b-c--brown);
+    --bs-warning: var(--b-c--yellow);
 }
 * {
     margin: 0;
@@ -18,6 +24,5 @@ a {
     text-decoration: none;
 }
 header {
-    width: 100%;
     background-color: var(--b-c--turquose);
 }
