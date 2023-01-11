@@ -31,8 +31,9 @@
                         <li class="nav-item"><a href="#" class="nav-link active">Маршруты</a></li>
                         <li class="nav-item"><a href="#" class="nav-link active">Гиды</a></li>
                     </ul>
-                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#authModal">Войти в ЛК</button>
-                </div>
+                    <!-- Button trigger modal -->
+                    <!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#authModal">Войти</button> -->
+                    <a href="./admin.html" class="btn btn-primary">Войти</a>
             </nav>
         </div>
     </header>
@@ -108,7 +109,7 @@
                     <input id="searchRoute" type="search" placeholder="Поиск по названию" class="form-control ">
                     <button type="submit" class="btn btn-outline-dark px-4">Найти</button>
                 </form>
-                <div id="map" class="map w-100">  
+                <div id="map" class="map w-100">
                 </div>
             </div>
         </section>
@@ -171,6 +172,7 @@
                 <h2>Гиды, доступные на вашем маршруте</h2>
                 <!--здесь будут гиды-->
             </div>
+
         </section>
     </main>
     <footer class="">
@@ -181,6 +183,32 @@
             </ul>
         </div>
     </footer>
+
+    <!-- auth Modal -->
+    <!-- <div class="modal fade" id="authModal" tabindex="-1" aria-labelledby="authModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <!-- <h1 class="modal-title fs-5" id="authModalLabel">Modal title</h1> -->
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form action="./admiin.html" class="col">
+                        <h3 class="text-center m-5">Авторизация</h3>
+                        <div class="col border-bottom my-4">
+                            <label for="authLogin">Логин</label>
+                            <input id="authLogin" type="email">
+                        </div>
+                        <div class="col border-bottom my-5">
+                            <label for="authPassword">Пароль</label>
+                            <input id="authPassword" type="password">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Войти</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div> -->
     <script src="../js/paginationRoutes.js"></script>
     <!-- Bootstrap JavaScript Libraries -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
