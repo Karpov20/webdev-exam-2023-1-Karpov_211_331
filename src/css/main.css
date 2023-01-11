@@ -26,3 +26,8 @@ a {
 header {
     background-color: var(--b-c--turquose);
 }
+#hero {
+    background: url(https://static-cse.canva.com/blob/579839/20201020T155859.528.jpg) fixed top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
