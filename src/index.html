@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <title>MosTurBaza</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="../js/paginationRoutes.js"></script>
+    <script src="../js/getRoutes.js"></script>
+    <script src="../js/getGuides.js"></script>
+    <script src="../js/setOrder.js"></script>
+    <script src="https://maps.api.2gis.ru/2.0/loader.js?pkg=full"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+
+<body>
+    <header id="header" class="fixed-top w-100">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-dark">
+                <a href="/"><img class="logo" src="../img/логотип.jpg" height="60px"><span
+                        class="navbar-brand">MosTourBaza</span></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-3 mb-lg-0">
+                        <li class="nav-item"><a href="#" class="nav-link active">О компании</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link active">Туры</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link active">Маршруты</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link active">Гиды</a></li>
+                    </ul>
+                    <a href="./admin.html" class="btn btn-primary">Войти</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section id="hero" class="d-flex align-items-center justify-content-center min-vh-100">
+            <div class="container text-center col justify-content-center col-md-6 col-lg-8">
+                <h1>MosTourBaza</h1>
+                <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h2>
+            </div>
+        </section>
+        <section class="my-5" id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 order-1 order-lg-2">
+                        <img class="img-fluid" src="../img/product1.jpg" alt="bear">
+                    </div>
+                    <div class="col-lg-6 pt-5 pt-lg-0 order-2 order-lg-1 content">
+                        <h3>Lorem ipsum dolor sit amet.</h3>
+                        <p class="font-italic">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum, adipisci?
+                        </p>
+                        <ul>
+                            <li><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="#ffc451"
+                                    class="bi bi-check-lg" viewBox="0 0 16 16">
+                                    <path
+                                        d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
+                                </svg>Проведено установочное совещание, на котором обозначены цели проекта, а также
+                                проведено небольшое исследование в формате группового интервью о готовности персонала к
+                                изменениям. </li>
+                            <li><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="#ffc451"
+                                    class="bi bi-check-lg" viewBox="0 0 16 16">
+                                    <path
+                                        d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
+                                </svg>Изучены информационные и нормативные документы организации, включая сборник статей
+                                сотрудников к 25-летию организации.</li>
+                            <li><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="#ffc451"
+                                    class="bi bi-check-lg" viewBox="0 0 16 16">
+                                    <path
+                                        d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z" />
+                                </svg>Проведена серия глубинных интервью с ключевыми сотрудниками.
+                            </li>
+                        </ul>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A, ab repellendus omnis at
+                            exercitationem unde!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="container text-center py-5">
+                <h3>Наши преимущества</h3>
+                <ul class="card-group row mt-5 justify-content-center gap-5">
+                    <li class="card col icon-box py-5 bg-light">
+                        <img src="../img/heart-icon.svg" alt="" class="card-img-top mb-5">
+                        <h3>Lorem, ipsum.</h3>
+                    </li>
+                    <li class="card col icon-box py-5  bg-light">
+                        <img src="../img/heart-icon.svg" alt="" class="card-img-top mb-5">
+                        <h3>Lorem, ipsum.</h3>
+                    </li>
+                    <li class="card col icon-box py-5  bg-light">
+                        <img src="../img/heart-icon.svg" alt="" class="card-img-top mb-5">
+                        <h3>Lorem, ipsum.</h3>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section>
+            <div class="container col py-5">
+                <h2>Начните свое путешествие с нами!</h2>
+                <form action="#" class="d-flex col-sm-5 mb-5">
+                    <label for="searchRoute"><span>Откуда начнем?</span></label>
+                    <input id="searchRoute" type="search" placeholder="Поиск по названию" class="form-control ">
+                    <button type="submit" class="btn btn-outline-dark px-4">Найти</button>
+                </form>
+                <div id="map" class="map w-100">
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="container my-5">
+                <div class="row">
+                    <h2>Список пешеходных маршрутов</h2>
+                    <div class="table-responsive my-3">
+                        <table id="routesTable" class="table table-hover table-bordered align-middle table-warning">
+
+                        </table>
+                    </div>
+                    <ul id="routesPagination" class="pagination justify-content-center">
+                        <!-- <button id="previous" onclick="getPreviousPage()" value="previous">☚</button>
+                        <button id="next" onclick="getNextPage()" value="next">☛</button> -->
+                    </ul>
+                </div>
+                <h3 class="my-3">Гиды, доступные на вашем маршруте</h3>
+                <table class="table table-hover table-bordered align-middle table-warning">
+                    <thead class="w-100">
+                        <tr>
+                            <th>Имя</th>
+                            <th>Язык</th>
+                            <th>Опыт</th>
+                            <th>Цена</th>
+                            <th>    </th>
+                        </tr>
+                    </thead>
+                    <tbody id="guidesTable">
+                        <tr class="text-center">
+                            <th>Сначала </th>
+                            <th>Выберите </th>
+                            <th>Маршрут </th>
+                            <th>из списка </th>
+                            <th>сверху</th>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        <section>
+            <div class="container py-3">
+                <h2 class="my-3">Заполните заявку</h2>
+                <form action="" class="row pb-5">
+                    <label for="routeNameInp"><span>Ваш маршрут</span></label>
+                    <input id="routeNameInp" type="text" disabled placeholder="Выберите маршрут" readonly>
+                    <label for="guideNameInp">Ваш гид</label>
+                    <input id="guideNameInp" type="text" disabled placeholder="Выберите гида" readonly>
+                    <label for="travelDate"><span>Дата экскурсии</span></label>
+                    <input type="date" name="" id="travelDate" class="form-control w-25" value="2022-01-16" required>
+                    <label for="travelTime"><span>Время экскурсии</span></label>
+                    <input type="time" min="09:00" max="23:00" name="" id="travelTime" class="form-control w-25" value="09:00" required>
+                    <label for="travelTTime"><span>Длительность экскурсии</span></label>
+                    <select name="" id="travelTTime"  class="form-select form-select-sm w-25" aria-label=".form-select-sm" required>
+                        <option value="" selected>Выберите продолжительность</option>
+                        <option value="1">1 час</option>
+                        <option value="1.5">1.5 часа</option>
+                        <option value="2">2 часа</option>
+                        <option value="2.5">2.5 часа</option>
+                        <option value="3">3 часа</option>
+                    </select>
+                    <label for="travelPeople">Количество человек</label>
+                    <input type="number" min="1" max="20" name="" id="travelPeople" class="form-control w-25" value="1">
+                    <div class="row my-5">
+                        <div class="form-check col">
+                            <input class="form-check-input" type="checkbox" value="" id="optionCheckFirst">
+                            <label class="form-check-label" for="optionCheckFirst">option 1</label>
+                          </div>
+                          <div class="form-check col">
+                            <input class="form-check-input" type="checkbox" value="" id="optionCheckSecond" checked>
+                            <label class="form-check-label" for="optionCheckFirst">option 2</label>
+                          </div>
+                    </div>
+                    <div class="d-flex col-sm-5 my-3">
+                        <label for="totalPrice"><span>Стоимость:</span></label>
+                        <input id="totalPrice" type="text" placeholder="Стоимость" readonly disabled>
+                        <button class="btn btn-outline-dark px-4" onclick="getTotalPrice(event)">Расчитать</button>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-primary" onclick="senfOrder(event)">Отправить</button>
+                        <button class="btn btn-danger">Отменить</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer class="">
+        <div class="container py-5">
+            <ul class="row">
+                <li class="col"><a href="mailto:example@mail.ru" class="text-white">example@mail.ru</a></li>
+                <li class="col"><a href="tel:88005553535" class="text-white">8 800 555 35 35</a></li>
+            </ul>
+        </div>
+    </footer>
+    <!-- <script src="../js/showGuides.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+        </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+        crossorigin="anonymous"></script>
+</body>
+</html>
