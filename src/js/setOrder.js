@@ -12,7 +12,7 @@ let order =
         "time": "14:00:00"
     }
 function calcTotalPrice() {
-    console.log({pricePH, hoursNumber, isThisDayOff, isItMorning, isItEvening, numberOfVisitors});
+    console.log(pricePH, hoursNumber, isThisDayOff, isItMorning, isItEvening, numberOfVisitors);
     totalPrice = pricePH * hoursNumber * isThisDayOff + isItMorning + isItEvening + numberOfVisitors;
     return totalPrice;
 }
@@ -66,13 +66,37 @@ function getTotalPrice(e) {
     } else { isThisDayOff = 1 }
     getMarginPerson(persons);
     calcTotalPrice();
-    console.log(totalPrice);
     displayPrice.value = totalPrice + '  rubles';
+    order['persons'] = persons;
+    order['date'] = date;
+    order['duration'] = hoursNumber;
+    order['time'] = curTime+ ':00';
+    order['price'] = totalPrice;
+    console.log(order);
 }
 
 function sendOrder(e) {
     e.preventDefault();
     e.stopPropagation();
     getTotalPrice();
-    console.log(order);
+    postData();
 }
+
+async function postData(url = 'http://exam-2023-1-api.std-900.ist.mospolytech.ru/api/orders?api_key=26f074f0-90b0-416a-87bc-47fb054836ec', data = order) {
+    // Default options are marked with *
+    const response = await fetch(url, {
+      method: 'POST', // *GET, POST, PUT, DELETE, etc.
+      mode: 'cors', // no-cors, *cors, same-origin
+      cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
+      credentials: 'same-origin', // include, *same-origin, omit
+      headers: {
+        'Content-Type': 'application/json'
+        // 'Content-Type': 'application/x-www-form-urlencoded',
+      },
+      redirect: 'follow', // manual, *follow, error
+      referrerPolicy: 'no-referrer', // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
+      body: JSON.stringify(data) // body data type must match "Content-Type" header
+    });
+    return response.json(); // parses JSON response into native JavaScript objects
+  }
+  
