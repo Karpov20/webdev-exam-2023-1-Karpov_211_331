@@ -4,8 +4,10 @@
     <title>MosTurBaza</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="../js/paginationRoutes.js"></script>
     <script src="../js/getRoutes.js"></script>
     <script src="../js/getGuides.js"></script>
+    <script src="../js/setOrder.js"></script>
     <script src="https://maps.api.2gis.ru/2.0/loader.js?pkg=full"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
@@ -116,16 +118,17 @@
                 <div class="row">
                     <h2>Список пешеходных маршрутов</h2>
                     <div class="table-responsive my-3">
-                        <table id="routes__table" class="table table-hover table-bordered align-middle table-warning">
+                        <table id="routesTable" class="table table-hover table-bordered align-middle table-warning">
 
                         </table>
                     </div>
-                    <ul id="pagination" class="pagination justify-content-center">
-
+                    <ul id="routesPagination" class="pagination justify-content-center">
+                        <!-- <button id="previous" onclick="getPreviousPage()" value="previous">☚</button>
+                        <button id="next" onclick="getNextPage()" value="next">☛</button> -->
                     </ul>
                 </div>
                 <h3 class="my-3">Гиды, доступные на вашем маршруте</h3>
-                <table>
+                <table class="table table-hover table-bordered align-middle table-warning">
                     <thead class="w-100">
                         <tr>
                             <th>Имя</th>
@@ -135,9 +138,56 @@
                             <th>    </th>
                         </tr>
                     </thead>
-                    <tbody id="guides__table">
+                    <tbody id="guidesTable">
+                        <tr class="text-center">
+                            <th>Сначала </th>
+                            <th>Выберите </th>
+                            <th>Маршрут </th>
+                            <th>из списка </th>
+                            <th>сверху</th>
+                        </tr>
                     </tbody>
                 </table>
+            </div>
+        </section>
+        <section>
+            <div class="container py-3">
+                <h2 class="my-3">Заполните заявку</h2>
+                <form action="" class="row pb-5">
+                    <label for="routeNameInp"><span>Ваш маршрут</span></label>
+                    <input id="routeNameInp" type="text" disabled placeholder="Выберите маршрут" >
+                    <label for="guideNameInp">Ваш гид</label>
+                    <input id="guideNameInp" type="text" disabled placeholder="Выберите гида">
+                    <label for="travelDate"><span>Дата экскурсии</span></label>
+                    <input type="date" name="" id="travelDate" class="form-control w-25" value="2022-01-16">
+                    <label for="travelTime"><span>Время экскурсии</span></label>
+                    <input type="time" min="09:00" max="23:00" name="" id="travelTime" class="form-control w-25" value="09:00">
+                    <label for="travelTTime"><span>Длительность экскурсии</span></label>
+                    <select name="" id="travelTTime"  class="form-select form-select-sm w-25" aria-label=".form-select-sm">
+                        <option value="" selected>Выберите продолжительность</option>
+                        <option value="1">1 час</option>
+                        <option value="1,5">1.5 часа</option>
+                        <option value="2">2 часа</option>
+                        <option value="2,5">2.5 часа</option>
+                        <option value="3">3 часа</option>
+                    </select>
+                    <label for="travelPeople">Количество человек</label>
+                    <input type="number" min="1" max="20" name="" id="travelPeople" class="form-control w-25" value="1">
+                    <div class="row my-5">
+                        <div class="form-check col">
+                            <input class="form-check-input" type="checkbox" value="" id="optionCheckFirst">
+                            <label class="form-check-label" for="optionCheckFirst">option 1</label>
+                          </div>
+                          <div class="form-check col">
+                            <input class="form-check-input" type="checkbox" value="" id="optionCheckSecond" checked>
+                            <label class="form-check-label" for="optionCheckFirst">option 2</label>
+                          </div>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-primary">Отправить</button>
+                        <button class="btn btn-danger">Отменить</button>
+                    </div>
+                </form>
             </div>
         </section>
     </main>
@@ -149,8 +199,7 @@
             </ul>
         </div>
     </footer>
-    <script src="../js/paginationRoutes.js"></script>
-    <script src="../js/showGuides.js"></script>
+    <!-- <script src="../js/showGuides.js"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
         integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
         </script>

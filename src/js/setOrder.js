@@ -1,4 +1,4 @@
-let pricePH;
+let pricePH, hoursNumber, isThisDayOff, isItMorning, isItEvening, numberOfVisitors;
 let order = 
     {
         "date": "", 
@@ -11,15 +11,15 @@ let order =
         "route_id": 0, 
         "time": "14:00:00"
     }
+function setTotalPrice() {
+    let Price = pricePH * hoursNumber * isThisDayOff + isItMorning + isItEvening + numberOfVisitors;
+}
 function setRoute(id) {
     order['route_id'] = id;
-    console.log(order);
 }
 function setGuide(id) {
     order['guide_id'] = id;
-    console.log(order);
 }
 function setPrice(price) {
     pricePH = price;
-    console.log(pricePH);
 }

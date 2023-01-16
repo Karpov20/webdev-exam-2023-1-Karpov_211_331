@@ -5,14 +5,9 @@ const getGuides = async function (route_id) {   //... получаем гидо�
       return response.json();
     })
     .then(data => {
-      showGuides(data); 
-      console.log(data);
+      showGuides(data);
     });
 };
-function selectRoute(id) {
-  setRoute(id);
-  getGuides(id);
-}
 function removeAllChildNodes(parent) {
   while (parent.firstChild) {
       parent.removeChild(parent.firstChild);
@@ -25,7 +20,7 @@ function showGuides(inputData) {
 	table.innerHTML = '';
 	for (let note of notes) {
 				let tr = document.createElement('tr');
-				let button = '<button onclick="selectGuide(' + note.id + ',' + note.pricePerHour + ')">Выбрать</button>'
+				let button = '<button onclick="selectGuide(' + note.id + ',' + note.pricePerHour + ', this)" value="' + note.name + '">Выбрать</button>'
 				table.appendChild(tr);		
 				createCell(note.name, tr);
 				createCell(note.language, tr);
@@ -35,7 +30,9 @@ function showGuides(inputData) {
 			}
 }
 
-function selectGuide(id, price) {
+function selectGuide(id, price, btn) {
+  const field = document.querySelector('#guideNameInp');
+  field.value = btn.value;
   setPrice(price);
   setGuide(id);
 }
