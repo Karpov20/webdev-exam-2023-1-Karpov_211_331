@@ -284,19 +284,5 @@ async function postData (url = 'http://exam-2023-1-api.std-900.ist.mospolytech.r
   });
   return response.json(); // parses JSON response into native JavaScript objects
 }
-
-function selectGuide (id, price, btn) {
-  const field = document.querySelector('#guideNameInp');
-  field.value = btn.value;
-  setPrice(price);
-  setGuide(id);
-}
-// async function selectRoute(id, btn) {
-//   const field = document.querySelector('#routeNameInp');
-//   field.value = btn.value;
-//   setRoute(id);
-//   showGuides(id)
-// }
-
+// start work
 allRoutes().then(paginationRoutes);
-// console.log(allRoutes());
