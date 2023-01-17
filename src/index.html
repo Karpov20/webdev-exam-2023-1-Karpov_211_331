@@ -1,17 +1,17 @@
 <!doctype html>
 <html lang="ru">
 <head>
-    <title>MosTourBaza</title>
+    <title>MosTurBaza</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <script src="../js/paginationRoutes.js"></script>
+    <!-- <script src="../js/paginationRoutes.js"></script>
     <script src="../js/getRoutes.js"></script>
     <script src="../js/getGuides.js"></script>
-    <script src="../js/setOrder.js"></script>
+    <script src="../js/setOrder.js"></script> -->
     <script src="https://maps.api.2gis.ru/2.0/loader.js?pkg=full"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="../css/main.css">
 </head>
 
 <body>
@@ -160,10 +160,10 @@
                     <input id="guideNameInp" type="text" disabled placeholder="Выберите гида" readonly>
                     <label for="travelDate"><span>Дата экскурсии</span></label>
                     <input type="date" name="" id="travelDate" class="form-control w-25" value="2022-01-16" required>
-                    <label for="travelTime"><span>Время экскурсии</span></label>
-                    <input type="time" min="09:00" max="23:00" name="" id="travelTime" class="form-control w-25" value="09:00" required>
-                    <label for="travelTTime"><span>Длительность экскурсии</span></label>
-                    <select name="" id="travelTTime"  class="form-select form-select-sm w-25" aria-label=".form-select-sm" required>
+                    <label for="travelTime"><span>Время начала экскурсии</span></label>
+                    <input type="time" min="09:00" max="23:00" step="600" name="" id="travelTime" class="form-control w-25" value="09:00" required>
+                    <label for="travelDuration"><span>Длительность экскурсии</span></label>
+                    <select name="" id="travelDuration"  class="form-select form-select-sm w-25" aria-label=".form-select-sm" required>
                         <option value="" selected>Выберите продолжительность</option>
                         <option value="1">1 час</option>
                         <option value="1.5">1.5 часа</option>
@@ -186,10 +186,9 @@
                     <div class="d-flex col-sm-5 my-3">
                         <label for="totalPrice"><span>Стоимость:</span></label>
                         <input id="totalPrice" type="text" placeholder="Стоимость" readonly disabled>
-                        <button class="btn btn-outline-dark px-4" onclick="getTotalPrice(event)">Расчитать</button>
                     </div>
                     <div class="btn-container">
-                        <button class="btn btn-primary" onclick="senfOrder(event)">Отправить</button>
+                        <button id="sendOrderBTN" class="btn btn-primary" onclick="sendOrder(event)">Отправить</button>
                         <button class="btn btn-danger">Отменить</button>
                     </div>
                 </form>
@@ -211,5 +210,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
         integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
         crossorigin="anonymous"></script>
+        <script>
+            
+        </script>
 </body>
 </html>
