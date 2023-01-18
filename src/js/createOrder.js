@@ -271,6 +271,7 @@ sendBtn.onclick = function (e) {
 const postData = async function () {
   let response = await fetch('http://exam-2023-1-api.std-900.ist.mospolytech.ru/api/orders?api_key=26f074f0-90b0-416a-87bc-47fb054836ec', {
     method: 'POST',
+    mode: 'cors',
     headers: {
       'Content-Type': 'application/json;charset=utf-8'
     },
