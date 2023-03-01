@@ -3,11 +3,7 @@
         "es6": true
     },
     "rules": {
-        "indent": [ "tab", 4 ],
-		"no-tabs": 0,
-		"no-console": "off",
-		"no-labels": "off",
-		"no-restricted-syntax": "off",
+        "indent": "error",
         "space-before-blocks": "error",
         "keyword-spacing": "error",
         "space-infix-ops": "error",
@@ -22,13 +18,12 @@
         "max-len": [
             "error",
             {
-                "code": 120
+                "code": 80
             }
         ],
         "semi": "error",
         "no-use-before-define": "error",
-        "no-array-constructor": "error",
-		"linebreak-style": 0,
+        "no-array-constructor": "error"
     },
     "parserOptions": {
         "ecmaVersion": 2017
